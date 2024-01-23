@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block titre %}CanapeId{% endblock %}
+
+{% block body %}
+    <h1>Description du modèle</h1>
+    <table>
+        <tr>
+            <th>Marque</th>
+            <th>Modele</th>
+            <th>Couleur</th>
+            <th>Prix</th>
+            <th>Stock</th>
+            <th>Catégorie</th>
+        </tr>
+            <tr>
+                <td>{{ canapeId.marque }}</td>
+                <td>{{ canapeId.modele }}</td>
+                <td>{{ canapeId.couleur }}</td>
+                <td>{{ canapeId.prix }}</td>
+                <td>{{ canapeId.stock }}</td>
+                <td>{{ canapeId.categorie.nom }}</td>
+            </tr>
+    </table>
+{% endblock %}

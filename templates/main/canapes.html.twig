@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block titre %}Canapes{% endblock %}
+
+{% block body %}
+    <h1>Liste de nos canapes</h1>
+    <table>
+        <tr>
+            <th>Marque</th>
+            <th>Modele</th>
+            <th>Couleur</th>
+            <th>Prix</th>
+            <th>Stock</th>
+            <th>Catégorie</th>
+        </tr>
+        {% for canape in listeCanape %}
+            <tr>
+                <td>{{ canape.marque }}</td>
+                <td>{{ canape.modele }}</td>
+                <td>{{ canape.couleur }}</td>
+                <td>{{ canape.prix }}</td>
+                <td>{{ canape.stock }}</td>
+                <td>{{ canape.categorie.nom }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
